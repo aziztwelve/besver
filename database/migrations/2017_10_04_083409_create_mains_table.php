@@ -18,10 +18,11 @@ class CreateMainsTable extends Migration
             // $table->date('created_at');
             $table->string('author', 50);
             $table->string('filter', 50);
-            $table->string('image', 100);
+            $table->text('image');
             $table->time('time_create');
             $table->string('content_main', 90);
             $table->string('content', 140);
+            $table->text('content_text');
             $table->timestamps();
         });
     }

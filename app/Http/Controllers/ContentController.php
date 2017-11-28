@@ -35,6 +35,12 @@ class ContentController extends Controller
 
 
 
+	public function showPhoto($id){
+		$content_photo = Main::whereId($id)->firstOrFail();
+		return view('show.content_photo', compact('content_photo'));
+	}
+
+
 
 
 
@@ -57,13 +63,10 @@ class ContentController extends Controller
 	// }
 
 
-	// public function sidebar (){
+	public function showSide ($id){
 
-	// 	// $sidebars = Sidebar::All();
-	// 	$sidebars = 'one two';
-
-
-	// 	return view('index_hub')->withSidebars($sidebars);
-	// }
+		$sideright = Sideright::whereId($id)->firstOrFail();
+		return view('show.content_side', compact('sideright'));
+	}
 
 }

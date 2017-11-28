@@ -15,11 +15,12 @@ class CreateMainNotPhotosTable extends Migration
     {
         Schema::create('main_not_photos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('author', 50);
+            $table->string('author', 50)->nullable()->change();
             $table->string('filter', 50);
             $table->time('time_create');
             $table->string('content_main', 90);
             $table->string('content', 140);
+            $table->text('content_text');
             $table->timestamps();
         });
     }

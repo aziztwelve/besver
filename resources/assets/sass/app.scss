@@ -1,9 +1,692 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+/*!
+ * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
-// Variables
+@import "functions";
 @import "variables";
+@import "mixins";
+@import "root";
+@import "print";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "utilities";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+
+
+
+
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*font-size: 100%;*/
+	/*font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+/*==================================================================================*/
+
+
+
+
+
+body{
+background-color: rgba(189, 197, 197, 0.06);
+font-family: Verdana, Georgia, Roboto,Tahoma, serif;
+font-size: 14px;
+width: 1250px;
+margin: auto;
+
+}
+
+
+h1, p{
+	color:  #070707;
+}
+
+
+/*===============================================================================*/
+
+.content{
+	/*min-height: 500px;*/
+	/*height: 500px;*/
+	/*width: 100%;*/
+	/*height: 500px;*/
+	position: relative;
+}
+
+.drum {
+    padding-top: 40px;
+    border-top: 1px solid #000;
+    padding-bottom: 40px;
+    height: 500px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.drum .important-news {
+    float: right;
+    width: 51.725%;
+    max-width: 600px;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+
+.drum .important-news img {
+    width: 600px;
+    height: 400px;
+    /*padding: 15px;*/
+    margin-right: 15px;
+}
+img {
+    border: 0;
+    display: block;
+}
+
+.drum .important-news .important-news-text {
+    position: absolute;
+    width: 600px;
+    left: 0;
+    bottom: 0;
+    padding: 25px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.drum .important-news .important-news-text .name {
+    font-family: BaseFontBold, Arial, serif;
+    font-size: 24px;
+    line-height: 28px;
+    display: block;
+    color: #fff;
+    margin-bottom: 4px;
+    transform: none;
+}
+
+.drum .important-news .important-news-text .author {
+    font-size: 13px;
+    color: #fff;
+    line-height: 18px;
+    margin-bottom: -6px;
+}
+.drum .important-news .important-news-text .author a {
+    color: #ffa800;
+}
+
+.drum .actual-news {
+    float: left;
+    width: 44.397%;
+    max-width: 515px;
+}
+
+.drum .most-current-today {
+    position: relative;
+    top: -8px;
+    display: inline-block;
+    font-family: BaseFontBold, Arial, serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: uppercase;
+    border-bottom: 5px solid #ffa800;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+.drum .actual-news .item-news {
+    margin-bottom: 27px;
+}
+.drum .actual-news .item-news .href-material {
+    display: block;
+    color: #000;
+    font-family: BaseFontDemi, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    transform: none;
+}
+.drum .actual-news .item-news .author {
+    color: #898989;
+    font-size: 13px;
+    line-height: 18px;
+    transform: none;
+}
+.drum .actual-news .item-news .author a {
+    color: #000;
+}
+
+
+
+
+.main{
+	background-color: white;
+	/*min-height: 500px;*/
+	overflow: hidden;
+
+}
+.home_post_container {
+    /*width: 40%;*/
+    word-wrap: break-word;
+	padding-bottom: 10px;
+	padding-left:   10px;
+	/*font-size: 100%;*/
+	position: relative;
+	/*min-height: 500px;*/
+	margin-top: 15px;
+	margin-bottom: 10px;
+	width: 550px;
+	min-height: 65px;
+}
+.title {
+    font-size: 125%;
+    line-height: 20px;
+    /*clear: both;*/
+    margin-left: 15px;
+    color: #2F0909;
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-family: BaseFontBold, Arial, serif;
+}
+
+
+.main .position_news{
+	margin-bottom: 50px;
+}
+
+.main .position_news .newsid-m15{
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.main .position_news .newsid{
+	padding: 5px;
+	color: white;
+	background-color: #d61920;
+	position: relative;
+	z-index: 2;
+	text-decoration: none;
+	top: 25px;
+
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-family: BaseFontBold, Arial, serif;
+     font-size: 110%;
+}
+
+
+
+.post_info {
+    display: block;
+    font-size: 13px;
+    color: rgba(7, 6, 21, 0.67);
+    padding-left: 5px;
+    bottom: -5px;
+    font-weight: lighter;
+}
+.post_info_date {
+    display: inline;
+    font-size: 10px;
+    padding-left: 15px;
+}
+
+.post_info_filter{
+	display: inline;
+	/*padding-left: 20px;*/
+	margin-left: 5px;
+}
+
+.post_info_author{
+	display: inline;
+	margin-left: 5px;
+}
+
+
+
+
+/*=====================================drum_buttom=========================================*/
+.drum_buttom{
+	height: 725px;
+	background-color: white;
+	margin-top: 20px; 
+    overflow: hidden;
+	
+
+}
+.drum_buttom .main_with_photo{
+	float: left;
+	clear: left;
+	width:600px;
+    overflow: hidden;
+	/*margin-right: 30px;*/
+}
+.poginate{
+    clear: both;
+    margin-left: 160px;
+    margin-bottom: 5px;
+}
+.drum_buttom .main_with_photo .post_with_photo{
+    word-wrap: break-word;
+	padding-bottom: 10px;
+	padding-left:   20px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left:  20px;
+	min-height: 65px;
+}
+.title_photo{
+    font-size: 125%;
+    line-height: 20px;
+    margin-left: 25px;
+    color: #2F0909;
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-family: BaseFontBold, Arial, serif;
+}
+.post_content_photo{
+	padding-left:  20px;
+}
+
+.mainphoto{
+	width: 110px;
+	height: 110px;
+	float: left;
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+}
+ 
+
+.post_info_photo{
+    display: block;
+    font-size: 13px;
+    color: rgba(7, 6, 21, 0.67);
+    padding-left: 5px;
+    bottom: -5px;
+    font-weight: lighter;
+}
+.post_date_photo {
+    display: inline;
+    font-size: 10px;
+    padding-left: 15px;
+}
+
+.post_filter_photo{
+	display: inline;
+	padding-left: 20px;
+	margin-left: 12px;
+}
+
+.post_author_photo{
+	display: inline;
+	margin-left: 12px;
+}
+
+
+/*================================== SIDERIGHT  =========================================*/
+
+.sidebar{
+	background-color: white;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-radius: 7px;
+	font-size: 105%;
+	width: 270px;
+    float: right;
+    width: 35%;
+    max-width: 270px;
+    height: 600px;
+    max-height: 600px;
+    
+}
+.content_news{
+    margin-top: 30px;
+    top: 0px;
+	display: block;
+    text-decoration: none;
+    word-wrap: break-word;
+    color: black;
+    padding: 10px 0;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x:  hidden;
+
+    max-width: 270px;
+    height: 700px;
+    max-height: 725px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.item{
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+
+    max-width: none;
+    margin-top: 20px;
+    overflow: hidden;
+    outline: none;
+    max-height: 50px;
+    border-top: 10px;
+}
+
+.list_time{
+	font-size: 9px;
+    text-transform: lowercase;
+    display: inline-block;
+    color: #190F0F;
+    font-weight: 100;
+}
+.list_time:hover{
+	color: black;
+}
+.list_item_text{
+	color: black !important;
+	font-family: Georgia, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.population_news{
+    margin-top: 20px;
+    /*background-color:red;*/
+    color: white;
+    margin: 15px;
+    width: 120px;
+    /*color: #2F0909;*/
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-family: BaseFontBold, Arial, serif;
+     font-size: 110%;
+
+     padding: 5px;
+    /*color: white;*/
+    background-color: #d61920;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    top: 25px;
+    margin-left: 15px;
+    /*margin-top: 15px;*/
+    margin-bottom: 50px;
+}
+
+/*==============================drum_inline===============================================*/
+.drum_inline{
+    margin-top: 20px;
+    background-color: black;
+    /*display: inline;*/
+    /*width: 100%;*/
+    /*height: 435px;*/
+    /*max-height: 435px;*/
+}
+
+
+
+/*================================== HEADER  =========================================*/
+
+.header{
+	background-color: #161633;
+	height: 50px;
+
+}
+
+
+/*================================== NAVBAR  =========================================*/
+
+
+.navbar_hub ul{
+	margin-bottom: 15px;
+	text-align: center;
+	list-style-type: none;
+	padding: 5px;
+}
+
+.navbar_hub ul li{
+	display: inline;
+}
+
+.navbar_hub ul li a{
+	text-decoration: none;
+	font-family: Arial;
+	/*padding: 0.2em, 1em;*/
+	padding: 5px;
+	color: #fff;
+	/*background-color: #0a0f35;*/
+	/*background-color: #000;*/
+	margin: 5px;
+}
+
+.navbar_hub ul li a:hover{
+	color: #000;
+	background-color: #fff;
+}
+
+.navbar_hub, .header{
+background-color: #161633;
+}
+
+
+/*==============================================FOOTER====================================================*/
+
+
+.footer{
+    margin-top: 15px;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    border-radius: 7px;
+    float: left;
+}
+
+.footer_content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: inherit;
+    color: #fff;
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+
+
+
+/*============================================CONTENT_DAY===================================================*/
+.content_day_main{
+    display: block;
+    float: right;
+    clear: both;
+    width: 100%;
+    height: auto;
+}
+.content_day{
+    width: 50%;
+    background-color: white;
+
+}
+.content_day_content{
+    color: black;
+    font-size: 180%;
+    margin: 30px;
+
+    font-weight: bold;
+    line-height: 38px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    /*font-family: BaseFontBold, Arial, serif;*/
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+.content_day_info{
+    height: 55px;
+    color: gray;
+    margin: 30px;
+    display: inline-block;
+}
+.content_day_info .time{
+    height: 20px;
+    text-transform: lowercase;
+}
+.content_day_info .time p{
+    margin: 15px;
+    margin-left: 0;
+    color: inherit;
+
+    /*font-weight: bold;*/
+    letter-spacing: -1px;
+    /*font-weight: 600;*/
+    font-family: BaseFontBold, Arial, serif;
+}
+
+.content_day_info .filter{
+    height: 20px;
+    font-size: 125%;
+    transform: uppercase;
+    border-bottom:3px solid #5befc8 ;
+
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-family: BaseFontBold, Arial, serif;
+}
+.author{
+    height: 40px;
+    margin: 30px;
+}
+.content_day_image{
+    margin: 30px;
+    max-height: 400px;
+    max-width: 600px;
+}
+
+.content_day_content_main{
+    margin: 30px;
+    font-weight: 400;
+    /*line-height: 22px;*/
+    /*font-size: !important;*/
+    /*font: !important;*/
+
+    /*font-weight: !important;*/
+    /*font-style: !important;*/
+    font-size: 18px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+
+.item-material{
+    min-height: 376px;
+    margin-right: 3.7%;
+    float: right;
+    width: 260px;
+    overflow: hidden;
+    border-bottom: 2px solid #000;
+    margin-bottom: 43px;
+    padding-bottom: 40px;
+    display: block;
+}
+.content_day_sidebar{
+    display: table;
+    width: 30%;
+    float: right;
+    clear: both;
+}
+.item-material img{
+    width: 260px;
+    max-height: 243px;
+}
+.ahref{
+    font-size: 18px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    color: black;
+    font-weight: bold;
+    font-weight: 600;
+
+}
+.ahref-author{
+     font-size: 18px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    color: gray;
+    /*font-weight: bold;*/
+    font-weight: 600;
+}
+
+
+
+
+/*===================================BOOTSTRAP===========================================*/
+
+
+

@@ -25,5 +25,14 @@ class Main extends Model
     // {
     //     return 'U';
     // }
+    protected $fillable = [
+        'author',
+        'filter',
+        'image',
+        'time_create',
+        'content_main',
+        'content_text',
+        'content'
+    ];
 
 }
