@@ -39,13 +39,16 @@
                        <a class="nav-link" href="#">Развлечения</a>
                     </li>
                     <li class="nav-item">
+                       <a class="nav-link" href="#">Политика</a>
+                    </li>
+                    <li class="nav-item">
                        <a class="nav-link" href="#">Наука</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="#">Авто</a>
+                       <a class="nav-link" href="#">Электромобиль</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="#">English</a>
+                       <a class="nav-link" href="#">Бизнес</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
